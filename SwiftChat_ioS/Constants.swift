@@ -2,7 +2,7 @@
 //  Constants.swift
 //  SwiftChat_ioS
 //
-//  Created by reubro on 16/11/17.
+//  Created by Stanly on 16/11/17.
 //  Copyright © 2017 Stanly. All rights reserved.
 //
 
