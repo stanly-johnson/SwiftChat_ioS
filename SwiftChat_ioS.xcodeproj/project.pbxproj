@@ -11,12 +11,8 @@
 		4C78E7FD1FBDBC4400F52783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C78E7FC1FBDBC4400F52783 /* GoogleService-Info.plist */; };
 		4C78E7FE1FBDBC4400F52783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C78E7FC1FBDBC4400F52783 /* GoogleService-Info.plist */; };
 		4C78E7FF1FBDBC4400F52783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C78E7FC1FBDBC4400F52783 /* GoogleService-Info.plist */; };
-		4C78E8011FBDBD3F00F52783 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78E8001FBDBD3F00F52783 /* Constants.swift */; };
-		4C78E8021FBDBD3F00F52783 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78E8001FBDBD3F00F52783 /* Constants.swift */; };
-		4C78E8031FBDBD3F00F52783 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78E8001FBDBD3F00F52783 /* Constants.swift */; };
 		4CD5D5DF1FBDAB98007DF035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5D5DE1FBDAB98007DF035 /* AppDelegate.swift */; };
 		4CD5D5E11FBDAB98007DF035 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5D5E01FBDAB98007DF035 /* ChatViewController.swift */; };
-		4CD5D5E41FBDAB99007DF035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5D5E21FBDAB99007DF035 /* Main.storyboard */; };
 		4CD5D5E71FBDAB99007DF035 /* SwiftChat_ioS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5D5E51FBDAB99007DF035 /* SwiftChat_ioS.xcdatamodeld */; };
 		4CD5D5E91FBDAB99007DF035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5D5E81FBDAB99007DF035 /* Assets.xcassets */; };
 		4CD5D5EC1FBDAB99007DF035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5D5EA1FBDAB99007DF035 /* LaunchScreen.storyboard */; };
@@ -48,11 +44,9 @@
 		390E1A892E27CE1D9891F9D2 /* Pods-SwiftChat_ioSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftChat_ioSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftChat_ioSTests/Pods-SwiftChat_ioSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C78E7FB1FBDB4D200F52783 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4C78E7FC1FBDBC4400F52783 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4C78E8001FBDBD3F00F52783 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4CD5D5DB1FBDAB98007DF035 /* SwiftChat_ioS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftChat_ioS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD5D5DE1FBDAB98007DF035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD5D5E01FBDAB98007DF035 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		4CD5D5E31FBDAB99007DF035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CD5D5E61FBDAB99007DF035 /* SwiftChat_ioS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftChat_ioS.xcdatamodel; sourceTree = "<group>"; };
 		4CD5D5E81FBDAB99007DF035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD5D5EB1FBDAB99007DF035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,10 +120,8 @@
 		4CD5D5DD1FBDAB98007DF035 /* SwiftChat_ioS */ = {
 			isa = PBXGroup;
 			children = (
-				4C78E8001FBDBD3F00F52783 /* Constants.swift */,
 				4CD5D5DE1FBDAB98007DF035 /* AppDelegate.swift */,
 				4CD5D5E01FBDAB98007DF035 /* ChatViewController.swift */,
-				4CD5D5E21FBDAB99007DF035 /* Main.storyboard */,
 				4CD5D5E81FBDAB99007DF035 /* Assets.xcassets */,
 				4CD5D5EA1FBDAB99007DF035 /* LaunchScreen.storyboard */,
 				4CD5D5ED1FBDAB99007DF035 /* Info.plist */,
@@ -299,7 +291,6 @@
 				4CD5D5EC1FBDAB99007DF035 /* LaunchScreen.storyboard in Resources */,
 				4C78E7FD1FBDBC4400F52783 /* GoogleService-Info.plist in Resources */,
 				4CD5D5E91FBDAB99007DF035 /* Assets.xcassets in Resources */,
-				4CD5D5E41FBDAB99007DF035 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +458,6 @@
 				4CD5D5E11FBDAB98007DF035 /* ChatViewController.swift in Sources */,
 				4CD5D5E71FBDAB99007DF035 /* SwiftChat_ioS.xcdatamodeld in Sources */,
 				4CD5D5DF1FBDAB98007DF035 /* AppDelegate.swift in Sources */,
-				4C78E8011FBDBD3F00F52783 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +466,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD5D5F71FBDAB9A007DF035 /* SwiftChat_ioSTests.swift in Sources */,
-				4C78E8021FBDBD3F00F52783 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD5D6021FBDAB9A007DF035 /* SwiftChat_ioSUITests.swift in Sources */,
-				4C78E8031FBDBD3F00F52783 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,14 +493,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4CD5D5E21FBDAB99007DF035 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CD5D5E31FBDAB99007DF035 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4CD5D5EA1FBDAB99007DF035 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
