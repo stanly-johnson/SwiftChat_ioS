@@ -18,15 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+       //the below code does the work of storyboard
        window = UIWindow(frame: UIScreen.main.bounds)
        window?.makeKeyAndVisible()
-       
-        let layout = UICollectionViewFlowLayout()
+       let layout = UICollectionViewFlowLayout()
+       let chatViewController = ChatViewController(collectionViewLayout : layout)
+       window?.rootViewController = UINavigationController(rootViewController: chatViewController)
         
-        let chatViewController = ChatViewController(collectionViewLayout : layout)
-        window?.rootViewController = UINavigationController(rootViewController: chatViewController)
-        
-        return true
+       return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
