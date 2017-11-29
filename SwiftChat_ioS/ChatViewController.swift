@@ -15,9 +15,10 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         
         collectionView?.backgroundColor = UIColor.white
-        collectionView?.register(PersonCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.alwaysBounceVertical = true
         navigationItem.title = "Recent"
+        
+        collectionView?.register(PersonCell.self, forCellWithReuseIdentifier: cellId)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +34,13 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 200)
     
     }
     
-    
-    class PersonCell : BaseCell {
+  }
+
+class PersonCell : BaseCell {
         
         let profileImageView : UIImageView = {
             let imageView = UIImageView()
@@ -51,7 +53,7 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
         
         let dividerLineView : UIView = {
             let divideLine = UIView()
-            divideLine.backgroundColor = UIColor.black
+            divideLine.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
             return divideLine
         }()
         
@@ -59,22 +61,55 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
             
             addSubview(profileImageView)
             addSubview(dividerLineView)
+            setupContainerView()
             
             profileImageView.image = UIImage(named: "icon")
+            
             profileImageView.translatesAutoresizingMaskIntoConstraints = false
             profileImageView.translatesAutoresizingMaskIntoConstraints = false
             
+            addConstraintsWithFormat(format: "H:|-12-[V0(68)]", views: profileImageView)
+            addConstraintsWithFormat(format: "V:[V0(68)]", views: profileImageView)
             
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-12-[V0(68)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["V0" : profileImageView]))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-12-[V0(68)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["V0" : profileImageView]))
+            addConstraint(NSLayoutConstraint(item: profileImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
             
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-82-[V0]", options: NSLayoutFormatOptions(), metrics: nil, views: ["V0" : dividerLineView]))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[V0(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["V0" : dividerLineView]))
+            addConstraintsWithFormat(format: "H:|-82-[V0]", views: dividerLineView)
+            addConstraintsWithFormat(format: "V:[V0(1)]|", views: dividerLineView)
             
         }
-    }
     
-    class BaseCell : UICollectionViewCell {
+    private func setupContainerView(){
+        let containerView = UIView()
+        containerView.backgroundColor = UIColor.red
+        addSubview(containerView)
+        
+        addConstraintsWithFormat(format: "H:|-90-[V0]", views: containerView)
+        addConstraintsWithFormat(format: "V:[V0(60)]", views: containerView)
+        addConstraint(NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+    }
+        
+}
+        
+extension UIView {
+            
+        func addConstraintsWithFormat(format : String, views : UIView...){
+            
+            var viewsDict = [String : UIView]()
+            for(index, view) in views.enumerated(){
+                let key = "V\(index)"
+                viewsDict[key] = view
+                view.translatesAutoresizingMaskIntoConstraints = false
+            }
+            
+            
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDict))
+        
+        }
+}
+        
+   
+    
+class BaseCell : UICollectionViewCell {
         
         override init(frame:CGRect){
             super.init(frame: frame)
@@ -89,8 +124,8 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
             backgroundColor = UIColor.cyan
         }
         
-    }
+}
     
     
- }
+
 
