@@ -38,6 +38,11 @@ class ChatViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print(cellId)
+    }
+    
   }
 
 class PersonCell : BaseCell {
@@ -53,20 +58,24 @@ class PersonCell : BaseCell {
         
         let dividerLineView : UIView = {
             let divideLine = UIView()
-            divideLine.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+
+            
+            
             return divideLine
         }()
         
         override func setupViews() {
             
             addSubview(profileImageView)
-            addSubview(dividerLineView)
+            
+            let divideView = dividerLineView
+            
+            divideView.backgroundColor = UIColor.darkGray
+            
+            addSubview(divideView)
             setupContainerView()
             
             profileImageView.image = UIImage(named: "icon")
-            
-            profileImageView.translatesAutoresizingMaskIntoConstraints = false
-            profileImageView.translatesAutoresizingMaskIntoConstraints = false
             
             addConstraintsWithFormat(format: "H:|-12-[V0(68)]", views: profileImageView)
             addConstraintsWithFormat(format: "V:[V0(68)]", views: profileImageView)
@@ -121,7 +130,7 @@ class BaseCell : UICollectionViewCell {
         }
         
         func setupViews(){
-            backgroundColor = UIColor.cyan
+            backgroundColor = UIColor.green
         }
         
 }
